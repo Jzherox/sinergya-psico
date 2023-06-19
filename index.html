@@ -90,32 +90,39 @@
                 <h2>Disponibilidad</h2>
                 <div>
                     <div>
-                        <h3>LUNES</h3><br>
-                        <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
+                        <!--- <div>
+                            <div>
+                                <h3>LUNES</h3><br>
+                                <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
+                            </div>
+                            <div>
+                                <h3>MARTES</h3><br>
+                                <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
+                            </div>
+                            <div>
+                                <h3>MIERCOLES</h3><br>
+                                <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
+                            </div>
+                            <div>
+                                <h3>JUEVES</h3><br>
+                                <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
+                            </div>
+                            <div>
+                                <h3>VIERNES</h3><br>
+                                <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
+                            </div>
+                            <div>
+                                <h3>SABADO</h3><br>
+                                <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
+                            </div>
+                            <div>
+                                <h3>DOMINGO</h3><br>
+                                <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
+                            </div>
+                        </div> --->
                     </div>
                     <div>
-                        <h3>MARTES</h3><br>
-                        <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
-                    </div>
-                    <div>
-                        <h3>MIERCOLES</h3><br>
-                        <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
-                    </div>
-                    <div>
-                        <h3>JUEVES</h3><br>
-                        <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
-                    </div>
-                    <div>
-                        <h3>VIERNES</h3><br>
-                        <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
-                    </div>
-                    <div>
-                        <h3>SABADO</h3><br>
-                        <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
-                    </div>
-                    <div>
-                        <h3>DOMINGO</h3><br>
-                        <h4>disponible<br>disponible<br>disponible<br>disponible</h4>
+                        ADQUIERE TU POSCION EN LA AGENSA AHORA
                     </div>
                 </div>
             </div>
@@ -127,15 +134,15 @@
                     <h2>Contactos</h2>
                     <div>
                         <div>
-                            <div><a loading="lazy" href="#cuadro-1-ON"><img src="resources/img/whatsapp.webp"
-                                        alt="whatsapp"></a>
+                            <div><a onclick="cambiarEstilo1(event)" loading="lazy"><img
+                                        src="resources/img/whatsapp.webp" alt="whatsapp"></a>
                                 <h3>WHATSAPP</h3>
                             </div>
-                            <div><a loading="lazy" href="#cuadro-2-ON"><img src="resources/img/llamada.webp"
+                            <div><a onclick="cambiarEstilo2(event)" loading="lazy"><img src="resources/img/llamada.webp"
                                         alt="llamada"></a>
                                 <h3>TELEFONO</h3>
                             </div>
-                            <div><a loading="lazy" href="#cuadro-3-ON"><img src="resources/img/gmail.webp"
+                            <div><a onclick="cambiarEstilo3(event)" loading="lazy"><img src="resources/img/gmail.webp"
                                         alt="gmail"></a>
                                 <h3>GMAIL</h3>
                             </div>
@@ -143,30 +150,40 @@
                     </div>
                 </div>
             </div>
-            <div id="cuadro-1-ON" class="cuadro">
+            <div id="cuadro-1" class="cuadro">
                 <div>
                     <img loading="lazy" src="resources/img/whatsapp.webp" alt="whatsapp">
                     <div>
                         <h2><span>Whatsapp: </span><br><span>+593 96 207 3715</span></h2><br>
-                        <a href="#cuadro-1-OFF">cerrar</a>
+                        <div>
+                            <a id="copiar1" onclick="copiarAlPortapapeles1()">copiar</a>
+                            <a onclick="cambiarEstilo11(event)" href="#cuadro-1-OFF">cerrar</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="cuadro-2-ON" class="cuadro">
+            <div id="cuadro-2" class="cuadro">
                 <div>
                     <img loading="lazy" src="resources/img/llamada.webp" alt="llamada">
                     <div>
                         <h2><span>Telefono: </span><br><span>096 207 3715</span></h2><br>
-                        <a href="#cuadro-2-OFF">cerrar</a>
+                        <div>
+                            <a id="copiar2" onclick="copiarAlPortapapeles2()">copiar</a>
+                            <a onclick="cambiarEstilo22(event)" href="#cuadro-2-OFF">cerrar</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div id="cuadro-3-ON" class="cuadro">
+            <div id="cuadro-3" class="cuadro">
                 <div>
                     <img loading="lazy" src="resources/img/gmail.webp" alt="gmail">
                     <div>
-                        <h2><span>Correo electronico: </span><br><span>Jballadares@gmail.com</span></h2><br>
-                        <a href="#cuadro-3-OFF">cerrar</a>
+                        <h2><span>Correo electronico: </span><br><span>psi.jballadaresm01@gmail.com</span></h2><br>
+                        <div>
+                            <a id="copiar3" onclick="copiarAlPortapapeles3()">copiar</a>
+                            <a onclick="cambiarEstilo33(event)" href="#cuadro-3-OFF">cerrar</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -183,12 +200,14 @@
                     <h5>© 2023 COPYRIGHT - TODOS LOS DERECHOS RESERVADOS PARA SINERGΨA</h5>
                 </div>
             </footer>
-
         </section>
+
     </main>
 </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="resources/scripts/section-detector.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="resources/scripts/smoth-scroll.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="resources/scripts/section-detector.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="resources/scripts/smoth-scroll.js"></script>
+<script src="resources/scripts/pop-ups.js"></script>
+
 </html>
