@@ -1,30 +1,32 @@
-const sections = document.querySelectorAll('section');
-const links = document.querySelectorAll('a[href^="#"]');
+const sections = [...document.querySelectorAll('section')];
+const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);
 
-const inView = (element) => {
-  const rect = element.getBoundingClientRect();
+const inView = (section) => {
+  let top = section.offsetTop;
+  let height = section.offsetHeight;
+
+  while (section.offsetParent) {
+    section = section.offsetParent;
+    top += section.offsetTop;
+  }
+
   return (
-    rect.top >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    top < window.pageYOffset + window.innerHeight &&
+    top + height > window.pageYOffset
   );
 };
 
-const updateActiveLink = () => {
-  let activeLink = null;
+window.onscroll = () => {
+  let next = false;
 
   sections.forEach((section) => {
-    const link = document.querySelector(`a[href='#${section.id}']`);
+    const a = getLinkById(section.id);
 
-    if (inView(section) && !activeLink) {
-      activeLink = link;
+    if (inView(section) && !next) {
+      a.classList.add('active');
+      next = true;
+    } else {
+      a.classList.remove('active');
     }
-
-    link.classList.remove('active');
   });
-
-  if (activeLink) {
-    activeLink.classList.add('active');
-  }
 };
-
-window.addEventListener('scroll', updateActiveLink);

@@ -83,11 +83,7 @@ a {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-}
-
-.active {
-    transition: all .5s ease;
-    border-bottom: 1px solid #ffffff63;
+    animation: traslate-line .5s;
 }
 
 .header-div nav a {
@@ -95,7 +91,7 @@ a {
     margin: 0;
     color: #fff;
     font-size: 16px;
-    transition: all .5s ease;
+    animation: traslate-line .5s;
     overflow: hidden;
     border-bottom: 1px solid transparent;
 }
@@ -104,28 +100,33 @@ a {
     border-bottom: 1px solid #ffffff63;
 }
 
-/*----------------------------------------------------------------------------------------------------------------------------------------------*/
-
-.container {
-    height: auto;
-    width: auto;
+.active {
+    animation: traslate-line .5s;
+    border-bottom: 1px solid #ffffff63;
 }
 
-.container section {
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+main {
+    height: fit-content;
+    width: 100%;
+}
+
+main section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.container section {
+main section {
     box-sizing: border-box;
     padding: 80px 0 0 0;
     margin: 0;
     color: #000;
 }
 
-.container section h2 {
+main section h2 {
     color: #000;
     padding: 10px 0 0 0;
 }
