@@ -93,7 +93,6 @@ a {
     font-size: 16px;
     animation: traslate-line .5s;
     overflow: hidden;
-    border-bottom: 1px solid transparent;
 }
 
 .header-div nav a:hover {
