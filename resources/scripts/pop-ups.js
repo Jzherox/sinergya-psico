@@ -8,7 +8,7 @@ function cambiarEstilo1(event) {
       var cuadro = document.getElementById("cuadro-1");
       cuadro.style.display = "none";
       var copiar1 = document.getElementById("copiar1");
-      copiar1.innerHTML = "Copiar";
+      copiar1.innerHTML = "copiar";
       copiar1.addAttribute("onclick");
       copiar1.style.background = "#2bff0062";
       copiar1.style.boxshadow = "0px 0px 10px #2bff0062";
@@ -23,7 +23,7 @@ function copiarAlPortapapeles1() {
     document.execCommand("copy");
     document.body.removeChild(elementoTemporal);
     var copiar1 = document.getElementById("copiar1");
-    copiar1.innerHTML = "Copiado";
+    copiar1.innerHTML = "copiado";
     copiar1.removeAttribute("onclick");
     copiar1.style.background = "#14ac00";
     copiar1.style.boxshadow = "0px 0px 10px #14ac00";
@@ -41,7 +41,7 @@ function cambiarEstilo2(event) {
     var cuadro = document.getElementById("cuadro-2");
     cuadro.style.display = "none";
     var copiar2 = document.getElementById("copiar2");
-    copiar2.innerHTML = "Copiar";
+    copiar2.innerHTML = "copiar";
     copiar2.addAttribute("onclick");
     copiar2.style.background = "#2bff0062";
     copiar2.style.boxshadow = "0px 0px 10px #2bff0062";
@@ -56,7 +56,7 @@ function copiarAlPortapapeles2() {
     document.execCommand("copy");
     document.body.removeChild(elementoTemporal);
     var copiar2 = document.getElementById("copiar2");
-    copiar2.innerHTML = "Copiado";
+    copiar2.innerHTML = "copiado";
     copiar2.removeAttribute("onclick");
     copiar2.style.background = "#14ac00";
     copiar2.style.boxshadow = "0px 0px 10px #14ac00";
@@ -74,7 +74,7 @@ function cambiarEstilo3(event) {
     var cuadro = document.getElementById("cuadro-3");
     cuadro.style.display = "none";
     var copiar3 = document.getElementById("copiar3");
-    copiar3.innerHTML = "Copiar";
+    copiar3.innerHTML = "copiar";
     copiar3.addAttribute("onclick");
     copiar3.style.background = "#2bff0062";
     copiar3.style.boxshadow = "0px 0px 10px #2bff0062";
@@ -89,7 +89,7 @@ function copiarAlPortapapeles3() {
     document.execCommand("copy");
     document.body.removeChild(elementoTemporal);
     var copiar3 = document.getElementById("copiar3");
-    copiar3.innerHTML = "Copiado";
+    copiar3.innerHTML = "copiado";
     copiar3.removeAttribute("onclick");
     copiar3.style.background = "#14ac00";
     copiar3.style.boxshadow = "0px 0px 10px #14ac00";
