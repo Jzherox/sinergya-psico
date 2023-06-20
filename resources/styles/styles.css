@@ -541,7 +541,7 @@ a {
     display: none;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(4px);
     z-index: 10;
 }
 
