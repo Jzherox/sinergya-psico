@@ -6,7 +6,12 @@ function cambiarEstilo1(event) {
   function cambiarEstilo11(event) {
       event.preventDefault();
       var cuadro = document.getElementById("cuadro-1");
-      cuadro.style.display = "none";   
+      cuadro.style.display = "none";
+      var copiar1 = document.getElementById("copiar1");
+      copiar1.innerHTML = "Copiar";
+      copiar1.addAttribute("onclick");
+      copiar1.style.background = "#2bff0062";
+      copiar1.style.boxshadow = "0px 0px 10px #2bff0062";
 }
   
 function copiarAlPortapapeles1() {
@@ -35,6 +40,11 @@ function cambiarEstilo2(event) {
     event.preventDefault();
     var cuadro = document.getElementById("cuadro-2");
     cuadro.style.display = "none";
+    var copiar2 = document.getElementById("copiar2");
+    copiar2.innerHTML = "Copiar";
+    copiar2.addAttribute("onclick");
+    copiar2.style.background = "#2bff0062";
+    copiar2.style.boxshadow = "0px 0px 10px #2bff0062";
 }
 
 function copiarAlPortapapeles2() {
@@ -63,6 +73,11 @@ function cambiarEstilo3(event) {
     event.preventDefault();
     var cuadro = document.getElementById("cuadro-3");
     cuadro.style.display = "none";
+    var copiar3 = document.getElementById("copiar3");
+    copiar3.innerHTML = "Copiar";
+    copiar3.addAttribute("onclick");
+    copiar3.style.background = "#2bff0062";
+    copiar3.style.boxshadow = "0px 0px 10px #2bff0062";
 }
 
 function copiarAlPortapapeles3() {
