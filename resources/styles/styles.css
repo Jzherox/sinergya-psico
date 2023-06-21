@@ -712,6 +712,7 @@ a {
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
+
 footer {
     display: flex;
     flex-direction: column;
@@ -726,40 +727,53 @@ footer {
     letter-spacing: 2px;
 }
 
-footer div:nth-child(1) {
-    display: flex;
-    align-items: center;
+footer div {
+    padding: 0;
+    margin: 0;
     width: 92%;
 }
 
-footer div:nth-child(1) h3 {
-    padding: 12px 0;
+footer div div {
+    padding: 0;
     margin: 0;
-    text-align: initial;
-    width: 100%;
-    font-size: clamp(.8em, 1em, 1.2em);
-    font-family: 'Times New Roman', Times, serif;
     border-bottom: #fff solid 1px;
 }
 
-footer div:nth-child(1) div {
+footer div div:nth-child(1) {
+    display: grid;
     padding: 0;
-    margin: 0 3.5% 0 0;
-    position: absolute;
-    height: auto;
-    width: fit-content;
-    right: 0;
+    margin: 0;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
+
 }
 
-footer div:nth-child(1) div img {
+footer div div:nth-child(1) h3 {
+    padding: 12px 0;
+    margin: 0;
+    width: 100%;
+    font-size: clamp(.8em, 1em, 1.2em);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer div div:nth-child(1) div {
     padding: 0;
-    margin: 0 3px;
+    margin: 0;
+    height: auto;
+    width: fit-content;
+    border-bottom: 0px;
+}
+
+footer div div:nth-child(1) div img {
+    padding: 0;
+    margin: 0;
     height: 30px;
     filter: invert(1) brightness(50%);
     border-radius: 10px;
 }
 
-footer div:nth-child(2) {
+footer div div:nth-child(2) {
     padding: 0;
     margin: 0;
     display: flex;
@@ -768,7 +782,7 @@ footer div:nth-child(2) {
     width: 100%;
 }
 
-footer div:nth-child(2) h5 {
+footer div div:nth-child(2) h5 {
     padding: 10px 0 16px;
     margin: 0;
     text-align: center;
