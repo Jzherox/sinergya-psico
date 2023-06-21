@@ -87,7 +87,7 @@ a {
 
 .header-div nav a {
     padding: 4px;
-    margin: 0 0 1px 0;
+    margin: 0 0 2px 0;
     color: #fff;
     font-size: clamp(.8em, 1em, 1.2em);
     animation: traslate-line .5s;
@@ -172,7 +172,7 @@ a {
 .home-section div div h3 {
     font-size: clamp(1em, 1.25em, 1.5em);
     font-weight: 400;
-    text-align: justify;
+    text-align: center;
 }
 
 .home-section div .logo {
@@ -242,7 +242,7 @@ a {
 }
 
 .about-section div div div h3 {
-    padding: 0; margin: 5px 33px 7px;
+    padding: 0; margin: 8px 0 12px 7px;
     overflow: hidden;
     text-align: start;
     font-size: clamp(1em, 1.25em, 1.5em);
@@ -635,12 +635,12 @@ a {
 
 .cuadro div div:nth-child(2) {
     background: transparent;
-    padding: 0; margin: 0;
+    padding: 0; margin: 0 10px 0 0;
     height: 100%; width: 520px;
     border-radius: 0px;
     flex-direction: column;
     text-align: left;
-    justify-content: baseline;
+    align-items: end;
 }
 
 .cuadro div div {
@@ -671,7 +671,6 @@ a {
 .cuadro div div a:nth-child(2) {
     box-sizing: border-box;
     padding: 5px; margin: 10px;
-    float: right;
     background-color:#ff000062;
     border: #00000000;
     box-shadow: 0px 0px 10px #ff000062;
@@ -689,8 +688,10 @@ a {
 }
 
 .cuadro div h2 {
+    width: 100%;
+    padding: 0; margin: 0;
     color: #fff;
-    line-height: 32px;
+    line-height: 36px;
     font-family: 'Zilla Slab', serif;
 }
 
@@ -772,4 +773,110 @@ footer div:nth-child(2) h5 {
     margin: 0;
     text-align: center;
     font-size: clamp(.5em, 0.75em, .9em);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 830px) {
+
+    .home-section div {
+        padding: 5px;
+        height: 85vh;
+        flex-direction: column;
+    }
+    
+    .home-section div div {
+        height: fit-content;
+    }
+
+    .home-section div img {
+        padding: 0;
+        margin: 0;
+        height: 200px; width: 200px;
+    }
+
+    .about-section div {
+        height: 85vh;
+        padding: 0;
+    }
+
+    .about-section div div img {
+        padding: 0; margin: 10px;
+        width: 180px; height: 180px;
+    }
+
+    .about-section div div {
+        padding: 0; margin: 0;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .about-section div div div {
+        height: fit-content;
+        padding: 0; margin: 0;
+    }
+
+    .location-section div {
+        height: 85vh;
+    }
+
+    .location-section div div {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .location-section div div iframe {
+        margin: 20px 0;
+        height: 50%; width: 100%;
+    }
+
+    .diary-section div {
+        height: 85vh;
+    }
+
+    .diary-section div div {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .contacts div {
+        padding: 0;
+        height: 85vh;
+        overflow: visible;
+    }
+
+    .contacts div div {
+        padding: 0;
+        height: 100%;
+    }
+
+    .contacts div div div {
+        padding: 0;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .contacts div div div div {
+        margin: 10px;
+    }
+
+    .contacts div div div img {
+        margin: 0;
+        height: 60px; width: 60px;
+    }
+
+    .cuadro div {
+        width: 90%;
+    }
+
+    .cuadro img {
+        padding: 5px;
+        height: 100px; width: 100px;
+    }
+}
+
+@media (max-width: 530px) {
+    .header nav {
+        display: none;
+    }
 }
