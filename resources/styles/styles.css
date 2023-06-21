@@ -19,8 +19,7 @@ h5,
 h6 {
     width: fit-content;
     padding: 0px;
-    margin: 12px;
-    text-align: center;
+    margin: 10px;
 }
 
 li {
@@ -90,7 +89,7 @@ a {
     padding: 4px;
     margin: 0 0 1px 0;
     color: #fff;
-    font-size: 16px;
+    font-size: clamp(.8em, 1em, 1.2em);
     animation: traslate-line .5s;
     overflow: hidden;
 }
@@ -139,7 +138,7 @@ a {
     box-sizing: border-box;
     padding: 0 10px 10px 10px;
     margin: 0;
-    background: linear-gradient(45deg, #5279be -1500px, #fff 50%, #53136A 4000px);
+    background: linear-gradient(45deg, #5279be -1500px, #fff 50%, #53136A 2500px);
     border-radius: 20px;
     height: 70vh;
     width: 92%;
@@ -147,12 +146,33 @@ a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    filter: drop-shadow(0px 0px 10px #0000003d);
 }
 
-.home-section h2 {
+.home-section div div {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: drop-shadow(0px 0px 10px #0000003b);
+}
+
+.home-section div div h2 {
+    filter: none;
+    padding: 10px; margin: 0;
+    background: #d9e9ff;
+    border-radius: 20px;
     text-align: center;
     font-weight: 100;
     font-family: 'Lobster', cursive;
+    filter: none;
+}
+
+.home-section div div h3 {
+    font-size: clamp(1em, 1.25em, 1.5em);
+    font-weight: 400;
+    text-align: justify;
 }
 
 .home-section div .logo {
@@ -166,6 +186,7 @@ a {
     margin: 0;
     height: 300px;
     width: 370px;
+    filter: drop-shadow(0px 0px 5px #ffffff54);
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -187,17 +208,19 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    filter: drop-shadow(0px 0px 10px #00000060);
 }
 
 .about-section div h2 {
-    font-size: 1.7em;
+    font-size: clamp(1.2em, 1.7em, 1.9em);
     font-weight: 100;
     font-family: 'Lilita One', cursive;
 }
 
 .about-section div div {
+    background: transparent;
     box-sizing: border-box;
-    padding: 0;
+    padding: 10px 20px;
     margin: 0;
     height: 70%;
     width: 92%;
@@ -206,11 +229,31 @@ a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    filter: none;
 }
 
-.about-section div div h3 {
-    font-size: 20px;
+
+.about-section div div div {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.about-section div div div h3 {
+    padding: 0; margin: 5px 33px 7px;
+    overflow: hidden;
+    text-align: start;
+    font-size: clamp(1em, 1.25em, 1.5em);
     font-family: 'Zilla Slab', serif;
+    font-weight: 400;
+}
+
+.about-section div div div h3:nth-child(odd) {
+    padding: 0; margin: 0 10px;
+    font-size: clamp(1em, 1.375em, 1.6em);
+    font-weight: 900;
 }
 
 .about-section div div img {
@@ -240,16 +283,18 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(45deg, #5279be -1500px, #fff 50%, #53136A 4000px);
+    background: linear-gradient(45deg, #5279be -1500px, #fff 50%, #53136A 2500px);
+    filter: drop-shadow(0px 0px 10px #0000003d);
 }
 
 .location-section div h2 {
-    font-size: 1.7em;
+    font-size: clamp(1.2em, 1.7em, 1.9em);
     font-weight: 100;
     font-family: 'Lilita One', cursive;
 }
 
 .location-section div div {
+    background: transparent;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -260,6 +305,7 @@ a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    filter: none;
 }
 
 .location-section div div iframe {
@@ -292,11 +338,12 @@ a {
     border-radius: 10px;
     margin: 0;
     padding: 10px;
-    font-size: 26px;
+    font-size: clamp(1.3em, 1.625em, 1.9em);
     height: auto;
     width: 400px;
     transition: all .5s;
     font-family: 'Zilla Slab', serif;
+    text-align: center;
 }
 
 .location-section div div div h3:hover {
@@ -304,11 +351,13 @@ a {
 }
 
 .location-section div div div h4 {
+    text-align: center;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: clamp(1em, 1.25em, 1.5em);
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     font-family: 'Zilla Slab', serif;
@@ -346,15 +395,17 @@ a {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(45deg, #53136A -1500px, #fff 50%, #5279be 2500px);
+    filter: drop-shadow(0px 0px 10px #00000060);
 }
 
 .diary-section div h2 {
-    font-size: 1.7em;
+    font-size: clamp(1.2em, 1.7em, 1.9em);
     font-weight: 100;
     font-family: 'Lilita One', cursive;
 }
 
 .diary-section div div {
+    background: transparent;
     box-sizing: border-box;
     padding: 10px; margin: 0;
     height: 70%;
@@ -363,6 +414,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    filter: none;
 }
 /* CAMBIAR TODO ESTO -------------------------------------*/
 .diary-section div div div:nth-child(1) {
@@ -422,7 +474,7 @@ a {
 
 .diary-section div div div h4 {
     height: 100%;
-    font-size: 18px;
+    font-size: clamp(1em, 1.125em, 1.5em);
     line-height: 25px;
     font-family: 'Zilla Slab', serif;
 }
@@ -467,15 +519,17 @@ a {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(45deg, #5279be -1500px, #fff 50%, #53136A 4000px);
+    filter: drop-shadow(0px 0px 10px #0000003d);
 }
 
 .contacts div h2 {
-    font-size: 1.7em;
+    font-size: clamp(1.2em, 1.7em, 1.9em);
     font-weight: 100;
     font-family: 'Lilita One', cursive;
 }
 
 .contacts div div {
+    background: transparent;
     height: 80%;
     width: 92%;
     display: flex;
@@ -483,6 +537,7 @@ a {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    filter: none;
 }
 
 .contacts div div div {
@@ -499,7 +554,9 @@ a {
 
 .contacts div div div div {
     flex-direction: column;
+    font-size: clamp(.5em, 0.875em, 1em);
     font-family: 'Zilla Slab', serif;
+    font-weight: 900;
 }
 
 .contacts div div div button {
@@ -560,7 +617,7 @@ a {
 
 @keyframes entrada {
   0% { transform: scale(0); opacity: 0; }
-  70% { transform: scale(1.2); opacity: 1; }
+  70% { transform: scale(1.1); opacity: 1; }
   100% { transform: scale(1); }
 }
 
@@ -599,7 +656,7 @@ a {
     border: #00000000;
     box-shadow: 0px 0px 10px #2bff0062;
     color: #fff;
-    font-size: 26px;
+    font-size: clamp(1.3em, 1.625em, 1.9em);
     border-radius: 10px;
     font-weight: 700;
     transition: all .5s;
@@ -619,7 +676,7 @@ a {
     border: #00000000;
     box-shadow: 0px 0px 10px #ff000062;
     color: #fff;
-    font-size: 26px;
+    font-size: clamp(1.3em, 1.625em, 1.9em);
     border-radius: 10px;
     font-weight: 700;
     transition: all .5s;
@@ -679,14 +736,14 @@ footer div:nth-child(1) h3 {
     margin: 0;
     text-align: initial;
     width: 100%;
-    font-size: 16px;
+    font-size: clamp(.8em, 1em, 1.2em);
     font-family: 'Times New Roman', Times, serif;
     border-bottom: #fff solid 1px;
 }
 
 footer div:nth-child(1) div {
     padding: 0;
-    margin: 0 50px 0 0;
+    margin: 0 3.5% 0 0;
     position: absolute;
     height: auto;
     width: fit-content;
@@ -714,5 +771,5 @@ footer div:nth-child(2) h5 {
     padding: 10px 0 16px;
     margin: 0;
     text-align: center;
-    font-size: 12px;
+    font-size: clamp(.5em, 0.75em, .9em);
 }

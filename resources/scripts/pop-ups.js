@@ -12,7 +12,6 @@ function cambiarEstilo1(event) {
       copiar1.style.background = "#2bff0062";
       copiar1.style.boxshadow = "0px 0px 10px #2bff0062";
 }
-  
 function copiarAlPortapapeles1() {
     var texto1 = "+593 96 207 3715";
     var elementoTemporal = document.createElement("textarea");
@@ -43,7 +42,6 @@ function cambiarEstilo2(event) {
     copiar2.style.background = "#2bff0062";
     copiar2.style.boxshadow = "0px 0px 10px #2bff0062";
 }
-
 function copiarAlPortapapeles2() {
     var texto2 = "096 207 3715";
     var elementoTemporal = document.createElement("textarea");
@@ -74,7 +72,6 @@ function cambiarEstilo3(event) {
     copiar3.style.background = "#2bff0062";
     copiar3.style.boxshadow = "0px 0px 10px #2bff0062";
 }
-
 function copiarAlPortapapeles3() {
     var texto3 = "psi.jballadaresm01@gmail.com";
     var elementoTemporal = document.createElement("textarea");
