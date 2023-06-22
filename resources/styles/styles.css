@@ -85,6 +85,71 @@ a {
     animation: traslate-line .5s;
 }
 
+.header div nav label {
+    display: none;
+}
+
+.burger {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    margin: 0 0 0 10%;
+    width: 80%;
+    background: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked~span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.burger input:checked~span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked~span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+}
+
 .header-div nav a {
     padding: 4px;
     margin: 0 0 2px 0;
@@ -160,7 +225,8 @@ a {
 
 .home-section div div h2 {
     filter: none;
-    padding: 10px; margin: 0;
+    padding: 10px;
+    margin: 0;
     background: #d9e9ff;
     border-radius: 20px;
     text-align: center;
@@ -242,7 +308,8 @@ a {
 }
 
 .about-section div div div h3 {
-    padding: 0; margin: 8px 0 12px 7px;
+    padding: 0;
+    margin: 8px 0 12px 7px;
     overflow: hidden;
     text-align: start;
     font-size: clamp(1em, 1.25em, 1.5em);
@@ -251,7 +318,8 @@ a {
 }
 
 .about-section div div div h3:nth-child(odd) {
-    padding: 0; margin: 0 10px;
+    padding: 0;
+    margin: 0 10px;
     font-size: clamp(1em, 1.375em, 1.6em);
     font-weight: 900;
 }
@@ -407,7 +475,8 @@ a {
 .diary-section div div {
     background: transparent;
     box-sizing: border-box;
-    padding: 10px; margin: 0;
+    padding: 10px;
+    margin: 0;
     height: 70%;
     width: 92%;
     display: flex;
@@ -416,11 +485,14 @@ a {
     flex-direction: row;
     filter: none;
 }
+
 /* CAMBIAR TODO ESTO -------------------------------------*/
 .diary-section div div div:nth-child(1) {
-    padding: 0; margin: 10px;
+    padding: 0;
+    margin: 10px;
     overflow: hidden;
-    height: 80%; width: 40%;
+    height: 80%;
+    width: 40%;
     overflow-x: scroll;
     scroll-behavior: smooth;
 }
@@ -429,11 +501,14 @@ a {
     height: 10px;
     background: #000;
 }
+
 /* CAMBIAR TODO ESTO --------------------------------------*/
 .diary-section div div div:nth-child(2) {
-    padding: 0; margin: 10px;
+    padding: 0;
+    margin: 10px;
     overflow: hidden;
-    height: 80%; width: 40%;
+    height: 80%;
+    width: 40%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -441,16 +516,19 @@ a {
 .diary-section div div div div:nth-child(odd) {
     display: block;
     overflow: hidden;
-    height: 90%; width: 200px;
+    height: 90%;
+    width: 200px;
 }
 
 .diary-section div div div div div {
     overflow: hidden;
-    padding: 0; margin: 5px;
+    padding: 0;
+    margin: 5px;
     display: flex;
     align-items: safe;
     justify-content: center;
-    height: 80%; width: 400px;
+    height: 80%;
+    width: 400px;
     background: #0d204134;
     flex-direction: column;
     cursor: pointer;
@@ -464,7 +542,8 @@ a {
 
 .diary-section div div div h3 {
     width: 100%;
-    padding: 10px; margin: 0;
+    padding: 10px;
+    margin: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     color: #fff;
@@ -561,7 +640,8 @@ a {
 
 .contacts div div div button {
     border: 0px;
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
     border-radius: 20px;
     z-index: 8;
 }
@@ -589,11 +669,13 @@ a {
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .cuadro {
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
     top: 0px;
     position: fixed;
     overflow: hidden;
-    height: 100vh; width: 100%;
+    height: 100vh;
+    width: 100%;
     background: #0000002a;
     display: none;
     justify-content: center;
@@ -602,11 +684,14 @@ a {
     z-index: 10;
 }
 
-.cuadro div{
-    padding: 0; margin: 0;
+.cuadro div {
+    padding: 0;
+    margin: 0;
     overflow: hidden;
-    height: 200px; width: 500px;
-    background: linear-gradient(90deg,#53136ad8 5%, #5279bed8);
+    height: 200px;
+    width: 500px;
+    min-width: 200px;
+    background: linear-gradient(90deg, #53136ad8 5%, #5279bed8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -615,27 +700,33 @@ a {
 }
 
 @keyframes entrada {
-  0% { transform: scale(0); opacity: 0; }
-  70% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); }
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .cuadro div img {
-    padding: 20px;
-}
-
-.cuadro div div:nth-child(1) {
-    padding: 0; margin: 0;
-    background: transparent;
-    height: 100%; width: 250px;
-    border-radius: 0px;
-    box-shadow: 10px 0 10px #0d2041;
+    padding: 0 5px 0 10px;
+    height: 130px;
+    width: 130px;
 }
 
 .cuadro div div:nth-child(2) {
     background: transparent;
-    padding: 0; margin: 0 10px 0 0;
-    height: 100%; width: 520px;
+    padding: 0;
+    margin: 0 10px 0 0;
+    height: 100%;
+    width: 520px;
     border-radius: 0px;
     flex-direction: column;
     text-align: left;
@@ -644,22 +735,29 @@ a {
 
 .cuadro div div {
     background: transparent;
-    padding: 0; margin: 0;
-    height: fit-content; width: fit-content;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    width: fit-content;
 }
 
-.cuadro div div a:nth-child(1) {
-    padding: 5px; margin: 10px;
-    float: right;
-    background-color:#2bff0062;
-    border: #00000000;
-    box-shadow: 0px 0px 10px #2bff0062;
+.cuadro div div a {
+    z-index: 15;
     color: #fff;
     font-size: clamp(1.3em, 1.625em, 1.9em);
     border-radius: 10px;
     font-weight: 700;
     transition: all .5s;
     cursor: pointer;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 10px;
+}
+
+.cuadro div div a:nth-child(1) {
+    background-color: #2bff0062;
+    border: #00000000;
+    box-shadow: 0px 0px 10px #2bff0062;
 }
 
 .cuadro div div a:nth-child(1):hover {
@@ -668,17 +766,9 @@ a {
 }
 
 .cuadro div div a:nth-child(2) {
-    box-sizing: border-box;
-    padding: 5px; margin: 10px;
-    background-color:#ff000062;
+    background-color: #ff000062;
     border: #00000000;
     box-shadow: 0px 0px 10px #ff000062;
-    color: #fff;
-    font-size: clamp(1.3em, 1.625em, 1.9em);
-    border-radius: 10px;
-    font-weight: 700;
-    transition: all .5s;
-    cursor: pointer;
 }
 
 .cuadro div div a:nth-child(2):hover {
@@ -688,7 +778,8 @@ a {
 
 .cuadro div h2 {
     width: 100%;
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
     color: #fff;
     line-height: 36px;
     font-family: 'Zilla Slab', serif;
@@ -702,11 +793,6 @@ a {
 .cuadro div h2 span:nth-child(3) {
     font-style: italic;
     font-weight: 100;
-}
-
-.cuadro img{
-    padding: 0; margin: 0;
-    height: 130px; width: 130px;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -797,7 +883,7 @@ footer div div:nth-child(2) h5 {
         height: 85vh;
         flex-direction: column;
     }
-    
+
     .home-section div div {
         height: fit-content;
     }
@@ -809,7 +895,8 @@ footer div div:nth-child(2) h5 {
     .home-section div img {
         padding: 0;
         margin: 0;
-        height: 200px; width: 200px;
+        height: 200px;
+        width: 200px;
     }
 
     .about-section div {
@@ -818,19 +905,23 @@ footer div div:nth-child(2) h5 {
     }
 
     .about-section div div img {
-        padding: 0; margin: 10px;
-        width: 180px; height: 180px;
+        padding: 0;
+        margin: 10px;
+        width: 180px;
+        height: 180px;
     }
 
     .about-section div div {
-        padding: 0; margin: 0;
+        padding: 0;
+        margin: 0;
         height: 100%;
         flex-direction: column;
     }
 
     .about-section div div div {
         height: fit-content;
-        padding: 0; margin: 0;
+        padding: 0;
+        margin: 0;
     }
 
     .location-section div {
@@ -844,7 +935,8 @@ footer div div:nth-child(2) h5 {
 
     .location-section div div iframe {
         margin: 20px 0;
-        height: 50%; width: 100%;
+        height: 50%;
+        width: 400px;
     }
 
     .diary-section div {
@@ -862,13 +954,35 @@ footer div div:nth-child(2) h5 {
 
     .cuadro img {
         padding: 5px;
-        height: 100px; width: 100px;
+        height: 100px;
+        width: 100px;
     }
 }
 
-@media (max-width: 640px) {
-    .header nav {
+@media (max-width: 566px) {
+    .header div {
+        grid-template-columns: 1fr auto;
+    }
+
+    .header div nav {
+        width: fit-content;
+    }
+
+    .header div nav label {
+        display: block;
+    }
+
+    .header div nav a {
         display: none;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .location-section div div iframe {
+        margin: 20px 0;
+        height: 50%;
+        width: 100%;
     }
 
     .contacts {
@@ -895,6 +1009,7 @@ footer div div:nth-child(2) h5 {
 
     .contacts div div div img {
         margin: 0;
-        height: 60px; width: 60px;
+        height: 60px;
+        width: 60px;
     }
 }
