@@ -1,0 +1,117 @@
+.cuadro {
+    top: 0px;
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background: #0000002a;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+.cuadro div {
+    overflow: hidden;
+    height: 200px;
+    width: 500px;
+    min-width: 200px;
+    background: linear-gradient(90deg, #53136ad8 5%, #5279bed8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    animation: entrada .5s;
+}
+
+@keyframes entrada {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cuadro div img {
+    padding: 0 5px 0 10px;
+    height: 130px;
+    width: 130px;
+}
+
+.cuadro div div:nth-child(2) {
+    background: transparent;
+    margin: 0 10px 0 0;
+    height: 100%;
+    width: 520px;
+    border-radius: 0px;
+    flex-direction: column;
+    text-align: left;
+    align-items: end;
+}
+
+.cuadro div div {
+    background: transparent;
+    height: fit-content;
+    width: fit-content;
+}
+
+.cuadro div div a {
+    z-index: 15;
+    color: #fff;
+    font-size: clamp(1.3em, 1.625em, 1.9em);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all .5s;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 10px;
+}
+
+.cuadro div div a:nth-child(1) {
+    background-color: #2bff0062;
+    border: #00000000;
+    box-shadow: 0px 0px 10px #2bff0062;
+}
+
+.cuadro div div a:nth-child(1):hover {
+    background: #14AC00;
+    box-shadow: 0px 0px 10px #14AC00;
+}
+
+.cuadro div div a:nth-child(2) {
+    background-color: #ff000062;
+    border: #00000000;
+    box-shadow: 0px 0px 10px #ff000062;
+}
+
+.cuadro div div a:nth-child(2):hover {
+    background: #d60000;
+    box-shadow: 0px 0px 10px #d60000;
+}
+
+.cuadro div h2 {
+    width: 100%;
+    color: #fff;
+    line-height: 36px;
+    font-family: 'Zilla Slab', serif;
+}
+
+.cuadro div h2 span:nth-child(1) {
+    font-style: bold;
+    font-weight: 700;
+}
+
+.cuadro div h2 span:nth-child(3) {
+    font-style: italic;
+    font-weight: 100;
+}

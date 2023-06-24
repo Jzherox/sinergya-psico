@@ -1,0 +1,4 @@
+.active {
+    transition: all .5s ease-out;
+    border-bottom: 1px solid #ffffff63;
+}
