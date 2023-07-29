@@ -106,6 +106,10 @@
     font-family: 'Zilla Slab', serif;
 }
 
+.cuadro div h2 span {
+    color: #fff;
+}
+
 .cuadro div h2 span:nth-child(1) {
     font-style: bold;
     font-weight: 700;

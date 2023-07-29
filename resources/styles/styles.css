@@ -6,6 +6,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: #0f0f0f;
 }
 
 body {
@@ -30,7 +31,7 @@ a {
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .header {
-    background: linear-gradient(90deg, #817E9B, #9347A1 20%, #53136A 50%, #3C394A);
+    background: linear-gradient(90deg, #D789D7ad, #9D65C9ad 15%, #5D54A4ad 75%, #2A3D66ad);
     border-radius: 0px 0px 15px 15px;
     position: fixed;
     height: 70px;
@@ -39,34 +40,37 @@ a {
     align-items: center;
     justify-content: center;
     z-index: 999;
+    backdrop-filter: blur(4px);
 }
 
 .header-div {
     height: auto;
-    width: 92%;
+    width: 88%;
     justify-content: center;
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr .5fr;
+    grid-template-columns: 1fr auto;
     position: relative;
     top: 0;
 }
 
 .header-div > h1 {
+    width: 100%;
     font-weight: 400;
     font-family: 'Times New Roman', Times, serif;
-    color: #284a85;
+    color: #3a68b6;
     text-shadow: #fff 0px 0px 10px;
+    font-size: 34px;
 }
 
 .header-div h1 > span {
-    color: #5279be;
+    color: #609aff;
 }
 
 .header-div > nav {
     padding: 8px;
     border-radius: 10px;
-    background: #817e9b46;
+    background: #b3b1be46;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,7 +119,7 @@ a {
 }
 
 .container section:nth-child(even) {
-    background: #e9e9e9;
+    background: #f9f9f9;
 }
 
 .container section:last-child {
@@ -128,12 +132,11 @@ a {
     box-sizing: border-box;
     margin: 0;
     padding: 10px;
-    background: linear-gradient(45deg, #5279be -1500px, #fff 50%, #53136A 2500px);
-    filter: drop-shadow(0px 0px 10px #00000060);
+    background: linear-gradient(45deg, #005eff -7000px, #fff 50%, #53136A 5800px);
 }
 
-.container section:nth-child(odd) > div {
-    background: linear-gradient(45deg, #53136A -1500px, #fff 50%, #5279be 2500px);
+.container section:nth-child(odd) > div, .contacts .contacts-div {
+    background: linear-gradient(45deg, #53136A -7000px, #fff 50%, #005eff 5800px);
 }
 
 .container section:last-child > div {
@@ -142,7 +145,8 @@ a {
 
 .container section div > h2 {
     padding: 10px 0 0 0;
-    font-size: clamp(1.2em, 1.7em, 1.9em);
+    margin: 0;
+    font-size: clamp(.9em, 1.5em, 1.9em);
     font-weight: 100;
     font-family: 'Lilita One', cursive;
 }
@@ -170,13 +174,19 @@ a {
 .home-section .home-div div > h2 {
     filter: none;
     padding: 10px;
-    background: #d9e9ff;
-    border-radius: 20px;
+    border-bottom: #d9e9ff solid 3px;
     text-align: center;
-    font-weight: 900;
-    font-size: clamp(1em, 1.7em, 2em);
-    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: clamp(.9em, 1.7em, 2em);
+    font-family:Arial, Helvetica, sans-serif;
     filter: none;
+    scale: 1;
+    transition: all .5s;
+}
+
+.home-section .home-div div > h2:hover {
+    scale: 1.01;
+    transition: all .5s;
 }
 
 .home-section .home-div div > h3 {
@@ -206,7 +216,6 @@ a {
 
 .about-section .about-div > div {
     box-sizing: border-box;
-    padding: 10px 20px;
     height: 90%;
     width: 92%;
     display: flex;
@@ -234,7 +243,7 @@ a {
 }
 
 .about-section .about-div div div h3:nth-child(odd) {
-    margin: 0 10px;
+    margin: 10px 10px 0 10px;
     text-align: start;
     font-size: clamp(1em, 1.375em, 1.6em);
     font-weight: 900;
@@ -265,7 +274,7 @@ a {
     width: 92%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     overflow: hidden;
     filter: none;
@@ -307,7 +316,7 @@ a {
     justify-content: center;
     align-items: center;
     color: #000;
-    background: #53136A;
+    background: #8a4fc0;
 }
 
 .location-section .location-div div div div > div {
@@ -360,7 +369,6 @@ a {
 
 .diary-section .diary-div > div {
     box-sizing: border-box;
-    padding: 10px;
     height: 100%;
     width: 92%;
     display: flex;
@@ -439,7 +447,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(45deg, #53136A -1500px, #fff 50%, #5279be 2500px);
 }
 
 .contacts .contacts-div > div {
@@ -448,7 +455,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     overflow: hidden;
     filter: none;
 }
@@ -457,7 +464,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    height: 70%;
     width: 50%;
     overflow: hidden;
 }
@@ -502,7 +509,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #838383;
     background-color: #171717;
     height: 70px;
     width: 100%;
@@ -522,6 +528,10 @@ a {
     grid-template-columns: 1fr auto;
     align-items: center;
     width: 100%;
+}
+
+.footer-section .footer-div div:nth-child(1) > h3, h5 {
+    color: #838383;
 }
 
 .footer-section .footer-div div:nth-child(1) > h3 {
@@ -562,149 +572,16 @@ a {
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*
-@media (max-width: 860px) {
-    .contacts .contacts-div div div {
-        width: 70%;
-    }
-}
-
-@media (max-width: 830px) {
-
-    .home-section .home-div {
-        padding: 5px;
-        height: 85vh;
-        flex-direction: column;
-    }
-
-    .home-section .home-div div {
-        height: fit-content;
-    }
-
-    .home-section .home-div div h3 {
-        display: none;
-    }
-
-    .home-section .home-div img {
-        margin: 20px 0;
-        height: 300px;
-        width: 300px;
-    }
-
-    .about-section .about-div {
-        height: 85vh;
-        
-    }
-
-    .about-section .about-div div img {
-        margin: 10px;
-        width: 180px;
-        height: 180px;
-    }
-
-    .about-section .about-div div {
-        height: 100%;
-        flex-direction: column;
-    }
-
-    .about-section .about-div div div {
-        height: fit-content;
-    }
-
-    .location-section .location-div {
-        height: 85vh;
-    }
-
-    .location-section .location-div div div {
-        height: 100%;
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .location-section .location-div div div div:nth-child(1) {
-        width: 100%;
-    }
-
-    .location-section .location-div div div div:nth-child(1) div {
-        overflow-y: scroll;
-    }
-
-    .location-section .location-div div div div:nth-child(2) {
-        background: #53136A;
-        width: 100%;
-    }
-
-    .diary-section .diary-div {
-        height: 85vh;
-    }
-
-    .diary-section .diary-div div {
-        height: 100%;
-        flex-direction: column;
-    }
-
-    .contacts .contacts-div div div {
-        width: 100%;
-    }
-
-    .cuadro div {
-        width: 90%;
-    }
-
-    .cuadro img {
-        padding: 5px;
-        height: 100px;
-        width: 100px;
-    }
-}
-
-@media (max-width: 566px) {
-    .header div {
-        grid-template-columns: 1fr auto;
-    }
-
-    .header div nav {
+@media (max-width: 640px) {
+    .header .header-div nav {
         width: fit-content;
     }
 
-    .header div nav label {
-        display: block;
-    }
-
-    .header div nav a {
+    .header .header-div nav > a {
         display: none;
     }
-}
 
-@media (max-width: 470px) {
-
-    .location-section .location-div div div div:nth-child(1) {
-        background: #53136A;
-        height: 40%; width: 100%;
-    }
-
-    .contacts {
-        height: 85vh;
-        overflow: visible;
-    }
-
-    .contacts .contacts-div div {
-        height: 100%;
-    }
-
-    .contacts .contacts-div div div {
-        height: 100%;
-        flex-direction: column;
-    }
-
-    .contacts .contacts-div div div div {
-        flex-direction: row;
-        margin: 10px;
-    }
-
-    .contacts .contacts-div div div img {
-        height: 60px;
-        width: 60px;
+    .header .header-div nav > label {
+        display: block;
     }
 }
-*/
