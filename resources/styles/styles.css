@@ -113,7 +113,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 70px 0 0 0;
+    padding: 100px 0 30px 0;
     color: #000;
     overflow: hidden;
 }
@@ -123,9 +123,10 @@ a {
 }
 
 .container section:last-child {
+    padding: 0; margin: 0;
     display: grid;
-    grid-template-rows: 1fr auto;
     grid-template-columns: 100%;
+    grid-template-rows: auto 80px;
 }
 
 .container section > div {
@@ -133,6 +134,12 @@ a {
     margin: 0;
     padding: 10px;
     background: linear-gradient(45deg, #005eff -7000px, #fff 50%, #53136A 5800px);
+    height: 100%;
+    width: 92%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container section:nth-child(odd) > div, .contacts .contacts-div {
@@ -140,7 +147,15 @@ a {
 }
 
 .container section:last-child > div {
+    padding: 100px 0 30px 0;
     background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .container section div > h2 {
@@ -153,18 +168,12 @@ a {
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.home-section > div {
-    border-radius: 20px;
-    height: 70vh;
-    width: 92%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.home-section .home-div {
+    flex-direction: row;
 }
 
 .home-section .home-div > div {
-    height: 90%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,16 +212,6 @@ a {
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
-
-.about-section > .about-div {
-    height: 70vh;
-    width: 92%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-}
 
 .about-section .about-div > div {
     box-sizing: border-box;
@@ -257,16 +256,6 @@ a {
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
-
-.location-section > .location-div {
-    height: 70vh;
-    width: 92%;
-    background: #fff;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .location-section .location-div > div {
     box-sizing: border-box;
@@ -357,16 +346,6 @@ a {
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.diary-section > .diary-div {
-    height: 70vh;
-    width: 92%;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .diary-section .diary-div > div {
     box-sizing: border-box;
     height: 100%;
@@ -429,19 +408,8 @@ a {
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.contacts {
-    margin: 0 0 30px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    overflow: hidden;
-}
-
 .contacts .contacts-div {
-    height: 63vh;
+    height: 100%;
     width: 92%;
     border-radius: 10px;
     display: flex;
@@ -450,7 +418,7 @@ a {
 }
 
 .contacts .contacts-div > div {
-    height: 190%;
+    height: 100%;
     width: 92%;
     display: flex;
     flex-direction: column;
@@ -510,7 +478,7 @@ a {
     flex-direction: column;
     align-items: center;
     background-color: #171717;
-    height: 70px;
+    height: 100%;
     width: 100%;
     letter-spacing: 2px;
 }
@@ -571,17 +539,3 @@ a {
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
-
-@media (max-width: 640px) {
-    .header .header-div nav {
-        width: fit-content;
-    }
-
-    .header .header-div nav > a {
-        display: none;
-    }
-
-    .header .header-div nav > label {
-        display: block;
-    }
-}
