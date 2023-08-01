@@ -17,7 +17,7 @@
     height: 4px;
     margin: 0 0 0 10%;
     width: 80%;
-    background: #fff;
+    background: #cacaca;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -57,4 +57,36 @@
     transform: rotate(-45deg);
     top: 28px;
     left: 5px;
+}
+
+.menu {
+    color: #000;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    height: 100vh;
+    width: 100%;
+    background: #ffffff8a;
+    backdrop-filter: blur(40px);
+}
+
+.menu div {
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 96%;
+    height: 280px;
+    border-radius: 5px 5px 20px 20px;
+    background: #9097ffbb;
+}
+
+label input:checked + .menu {
+    display: flex;
+    align-items: start;
+    justify-content: center;
 }
