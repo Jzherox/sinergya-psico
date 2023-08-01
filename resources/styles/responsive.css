@@ -15,7 +15,7 @@
         display: block;
     }
 
-    .home-section .home-div, .about-section > .about-div div, .location-section > .location-div, .diary-section > .diary-div {
+    .home-section .home-div, .about-section > .about-div div, .location-section > .location-div div, .diary-section > .diary-div {
         flex-direction: column;
         justify-content: start;
         overflow-y: scroll;
