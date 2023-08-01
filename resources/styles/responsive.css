@@ -15,6 +15,10 @@
         display: block;
     }
 
+    .header-div .page-theme {
+        display: none;
+    }
+
     .home-section .home-div, .about-section > .about-div div, .location-section > .location-div div, .diary-section > .diary-div {
         flex-direction: column;
         justify-content: start;
