@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="resources/img/logo-sinergya.webp">
     <title>SINERGΨA</title>
+    <link rel="stylesheet" href="resources/styles/loader.css">
     <link rel="stylesheet" href="resources/styles/styles.css">
     <link rel="stylesheet" href="resources/styles/responsive.css">
     <link rel="stylesheet" href="resources/styles/burguer-menu.css">
@@ -21,8 +22,14 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <div class="loader-container" id="loader">
+        <div class="loader">
+            <div class="loader_cube loader_cube--color"></div>
+            <img src="resources/img/logo-sinergya - cut.webp" alt="logo">
+            <div class="loader_cube loader_cube--glowing"></div>
+        </div>
+    </div>
     <header class="header">
         <div class="header-div">
             <h1>SINERG<span>Ψ</span>A</h1>
@@ -134,7 +141,8 @@
                             <h3>
                                 Si estás listo para comenzar tu camino hacia el bienestar emocional, te invitamos a
                                 hacer clic en el siguiente botón para agendar una cita en Sinergya. Estamos ansiosos por
-                                conocerte y ofrecerte el apoyo que necesitas. ¡No esperes más y reserva tu consulta ahora mismo!
+                                conocerte y ofrecerte el apoyo que necesitas. ¡No esperes más y reserva tu consulta
+                                ahora mismo!
                             </h3>
                         </div>
 
@@ -191,7 +199,7 @@
                                 <a id="copiar2" onclick="copiarAlPortapapeles2()">copiar</a>
                                 <a onclick="cambiarEstilo22(event)" href="#cuadro-2-OFF">cerrar</a>
                             </div>
-    
+
                         </div>
                     </div>
                 </div>
@@ -231,5 +239,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="resources/scripts/smoth-scroll.js"></script>
 <script src="resources/scripts/pop-ups.js"></script>
-
+<script src="resources/scripts/Loader-code.js"></script>
+<script src="resources/scripts/Loader.js"></script>
 </html>
