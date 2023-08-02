@@ -1,4 +1,4 @@
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .header {
         height: 60px;
     }
@@ -12,11 +12,16 @@
     }
 
     .header .header-div nav > label {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 22px;
+        width: 28px;
     }
 
-    .header-div .page-theme {
-        display: none;
+    .header .header-div nav .burger span {
+        width: 40px;
+        margin: -4px 0 0 -6px;
     }
 
     .home-section .home-div, .about-section > .about-div div, .location-section > .location-div div, .diary-section > .diary-div {
